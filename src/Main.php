@@ -1,6 +1,6 @@
 <?php
 
-namespace OP;
+namespace Overlay;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -17,15 +17,15 @@ use pocketmine\level\Level;
 class Main extends PluginBase implements Listener{
 
     public function onEnable(){
-      $this->getLogger()->info("Overplay is now enabled.");
+      $this->getLogger()->info("Overlay is now enabled.");
       $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
       switch($command->getName()){
 
-       case "overplay":
-         if($sender->hasPermission("lc.overplay")){
+       case "overlay":
+         if($sender->hasPermission("lc.overlay")){
            if(isset($args[0]) && isset($args[1])){
              $name = strtolower(array_shift($args));
              $player = $sender->getServer()->getPlayer($name);
@@ -36,7 +36,7 @@ class Main extends PluginBase implements Listener{
              $player->sendMessage("§c[".$sender->getName()."] ".implode(" ", $args));
              $player->sendMessage("§c[".$sender->getName()."] ".implode(" ", $args));
            }else{
-             $sender->sendMessage("§cUtilise : /overplay [player] [msg]");
+             $sender->sendMessage("§cUtilise : /overlay [player] [msg]");
            }
          }else{
            $sender->sendMessage("§cYou don't have permission to do this.");
