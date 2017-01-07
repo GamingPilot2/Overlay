@@ -30,11 +30,11 @@ class Main extends PluginBase implements Listener{
              $name = strtolower(array_shift($args));
              $player = $sender->getServer()->getPlayer($name);
              $player->sendPopup("§c".implode(" ", $args)."\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", $this->owner->player);
-             $player->sendMessage("§c[".$sender->getName()."] ".implode(" ", $args));
-             $player->sendMessage("§c[".$sender->getName()."] ".implode(" ", $args));
-             $player->sendMessage("§c[".$sender->getName()."] ".implode(" ", $args));
-             $player->sendMessage("§c[".$sender->getName()."] ".implode(" ", $args));
-             $player->sendMessage("§c[".$sender->getName()."] ".implode(" ", $args));
+             $player->sendMessage("§c["§2Craft§aLand §4Alert §c"] ".implode(" ", $args));
+             $player->sendMessage("§c["§2Craft§aLand §4Alert §c"] ".implode(" ", $args));
+             $player->sendMessage("§c["§2Craft§aLand §4Alert §c"] ".implode(" ", $args));
+             $player->sendMessage("§c["§2Craft§aLand §4Alert §c"] ".implode(" ", $args));
+             $player->sendMessage("§c["§2Craft§aLand §4Alert §c"] ".implode(" ", $args));
            }else{
              $sender->sendMessage("§cUtilise : /overlay [player] [msg]");
            }
